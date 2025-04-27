@@ -4,7 +4,6 @@ A **Django REST Framework**-based microservice for **user registration** and **a
 
 [![Python Version](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/)
 [![Django Version](https://img.shields.io/badge/django-5.0.6-green.svg)](https://www.djangoproject.com/)
-[![License](https://img.shields.io/badge/license-BSD3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![Tests Passed](https://img.shields.io/badge/tests-passed-brightgreen)](https://pytest.org/)
 
 ---
@@ -135,26 +134,34 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+### Run Test
+
+```bash
+(to root folder)
+
+pytest
+```
+
 ### 🏗️ Project Structure
 
 ```bash
 user_service/
 ├── settings/               # Project configuration
 │   ├── config.py           # Main settings file
-│   ├── urls.py            # Root URL router
-│   └── wsgi.py            # WSGI application
+│   ├── urls.py             # Root URL router
+│   └── wsgi.py             # WSGI application
 │
 ├── users/                  # Auth app
 │   ├── migrations/         # Database migrations
 │   ├── models.py           # Custom User model
 │   ├── serializers.py      # Request/response serializers
 │   ├── views.py            # API view classes
-│   ├── urls.py            # App URL routes
-│   └── tests/             # Unit tests
+│   ├── urls.py             # App URL routes
+│   └── tests/              # Unit tests
 │
 ├── requirements.txt        # Python dependencies
-├── manage.py              # Django CLI
-└── README.md              # This file
+├── manage.py               # Django CLI
+└── README.md               # This file
 ```
 
 ## 🚀 Happy Coding!
