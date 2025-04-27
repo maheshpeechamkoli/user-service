@@ -146,24 +146,26 @@ pytest
 
 ```bash
 user_service/
-├── tests/                  # Created tests directory
+├── tests/                      # Created tests directory Unit tests
 │   └── test_views.py
-├── settings/               # Project configuration
-│   ├── config.py           # Main settings file
-│   ├── urls.py             # Root URL router
-│   └── wsgi.py             # WSGI application
+├── migrations/                 # Root folder for all migrations
+│   └── users/                  # Subfolder for 'users' migrations
+│       └── 0001_initial.py     # Example of a migration file for the 'users' app
+├── settings/                   # Project configuration
+│   ├── config.py               # Main settings file
+│   ├── urls.py                 # Root URL router
+│   └── wsgi.py                 # WSGI application
 │
-├── users/                  # Auth app
-│   ├── migrations/         # Database migrations
-│   ├── models.py           # Custom User model
-│   ├── serializers.py      # Request/response serializers
-│   ├── views.py            # API view classes
-│   ├── urls.py             # App URL routes
-│   └── tests/              # Unit tests
+├── users/                      # Auth app
+│   ├── migrations/             # Database migrations
+│   ├── models.py               # Custom User model
+│   ├── serializers.py          # Request/response serializers
+│   ├── views.py                # API view classes
+│   ├── urls.py                 # App URL routes
 │
-├── requirements.txt        # Python dependencies
-├── manage.py               # Django CLI
-└── README.md               # This file
+├── requirements.txt            # Python dependencies
+├── manage.py                   # Django CLI
+└── README.md                   # This file
 ```
 
 ## 🚀 Happy Coding!
