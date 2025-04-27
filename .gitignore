@@ -1,0 +1,13 @@
+# Ignore the following
+*migrations
+*.pyc
+*.txt
+*.cnf
+*.swp
+*.sqlite3
+settings/local_config.py
+.vscode/
+*.sh
+tmp
+# But not the below files
+! requirements.txt
