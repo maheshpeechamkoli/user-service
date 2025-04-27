@@ -146,7 +146,7 @@ pytest
 
 ```bash
 user_service/
-├── tests/                   # Created tests directory
+├── tests/                  # Created tests directory
 │   └── test_views.py
 ├── settings/               # Project configuration
 │   ├── config.py           # Main settings file
