@@ -124,7 +124,7 @@ psql -h localhost -U django_user -d userservice
 ```bash
 Add a migration folder in root
 
-python manage.py makemigrations
+python manage.py makemigrations users
 python manage.py migrate
 ```
 
