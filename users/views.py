@@ -24,9 +24,15 @@ class LoginView(generics.GenericAPIView):
         user = authenticate(email=serializer.validated_data['email'], password=serializer.validated_data['password'])
 
         if user is not None:
-            return Response({
-                "message": "Authenticated successfully"
-            }, status=status.HTTP_200_OK)
-        else:
-            return Response({"error": "Invalid credentials"}, status=status.HTTP_401_UNAUTHORIZED)
+            return Response(
+                {
+                    "id": user.id,
+                    "email": user.email
+                },
+                status=status.HTTP_200_OK
+            )
+        return Response(
+            {"error": "Invalid credentials"},
+            status=status.HTTP_401_UNAUTHORIZED
+        )
 
